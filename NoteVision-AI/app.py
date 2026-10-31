@@ -24,7 +24,7 @@ from segmentation import segment_characters, get_line_crops, draw_boxes
 from recognition import load_mapping, load_emnist_model, recognize_segments, generate_confidence_review
 from pdf_generator import generate_pdf
 from trocr_recognition import recognize_line, normalize_line_endings, processor as trocr_processor, model as trocr_model
-
+from pathlib import Path
 # ==============================
 # PAGE CONFIG
 # ==============================
@@ -254,8 +254,10 @@ hr {
 # ==============================
 # MODEL & MAPPING PATHS
 # ==============================
-MODEL_PATH = "models/emnist_model.keras"
-MAPPING_PATH = "data/emnist_mapping.txt"
+BASE_DIR = Path(__file__).resolve().parent
+
+MODEL_PATH = BASE_DIR / "models" / "emnist_model.keras"
+MAPPING_PATH = BASE_DIR / "data" / "emnist_mapping.txt"
 
 
 @st.cache_resource
