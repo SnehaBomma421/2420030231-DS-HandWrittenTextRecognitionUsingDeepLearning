@@ -1,0 +1,13 @@
+streamlit
+tensorflow
+opencv-python-headless
+numpy
+pandas
+pillow
+reportlab
+matplotlib
+seaborn
+scikit-learn
+torch
+transformers
+pypdfium2
